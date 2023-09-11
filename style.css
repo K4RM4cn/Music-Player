@@ -4,15 +4,29 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+body{
+    overflow: hidden;
+}
+
+.image{
+    height: 100vh;
+    width: 100vw;
+    filter: blur(10px);
+    position: fixed;
+    z-index: -5;
+    background-repeat: no-repeat;
+    position: absolute;
+    transform:scale(2.2) 
+    }
+
 .container{
     width: 100%;
     height: 100vh;
-    background-image: url("media/thumbnail.png");
-    /*background: #333;*/
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    position: absolute;
 
 }
 .music-player{
@@ -34,13 +48,12 @@ nav .circle{
     line-height: 40px;
     background: #aeaeae;
     color: #0065bd;
-    box-shadow: 0 5px 10px rgba(26, 255, 247, 0.22);
 }
 .song-img{
     width: 220px;
     border-radius: 50%;
     border: 8px solid #aeaeae;
-    box-shadow: 0 10px 60px rgba(26, 255, 247, 0.22);
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.636);
 }
 .music-player h1{
     font-size: 20px;
@@ -69,7 +82,6 @@ nav .circle{
     height: 30px;
     border-radius: 50%;
     border: 8px solid #fff;
-    box-shadow: 0 50x 5px rgba(26, 255, 247, 0.22);
 }
 .controls{
     display: flex;
@@ -86,7 +98,6 @@ nav .circle{
     justify-content: center;
     border-radius: 50%;
     color: #0065bd;
-    box-shadow:0 10px 20px rgba(255, 26, 26, 0.22)
     cursor: pointer;
 }
 .controls div:nth-child(2){
